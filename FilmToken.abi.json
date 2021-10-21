@@ -1,0 +1,71 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"yearOfCreation","type":"uint256"},
+				{"name":"genre","type":"string"},
+				{"name":"duration","type":"uint256"},
+				{"name":"rating","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenOwner",
+			"inputs": [
+				{"name":"filmName","type":"string"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenInfo",
+			"inputs": [
+				{"name":"filmName","type":"string"}
+			],
+			"outputs": [
+				{"name":"tokenName","type":"string"},
+				{"name":"tokenyearOfCreation","type":"uint256"},
+				{"name":"tokenGenre","type":"string"},
+				{"name":"tokenDuration","type":"uint256"},
+				{"name":"tokenRating","type":"uint256"}
+			]
+		},
+		{
+			"name": "sale",
+			"inputs": [
+				{"name":"tokenId","type":"string"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"tokenSale","type":"string"},
+				{"name":"tokenPrice","type":"uint256"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"yearOfCreation","type":"uint256"},{"name":"genre","type":"string"},{"name":"duration","type":"uint256"},{"name":"rating","type":"uint256"}],"name":"tokensArr","type":"tuple[]"},
+		{"name":"tikenToOwner","type":"optional(cell)"},
+		{"name":"tikenId","type":"optional(cell)"}
+	]
+}
